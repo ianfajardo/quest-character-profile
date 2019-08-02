@@ -7,7 +7,7 @@ const path = require('path');
    chunkFilename: "[id].css"
  });
 
- const envmode = 'development';
+ var envmode = 'development';
 
  if (process.env.NODE_ENV == 'production') {
    envmode = 'production';
