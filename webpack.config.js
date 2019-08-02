@@ -7,8 +7,14 @@ const path = require('path');
    chunkFilename: "[id].css"
  });
 
+ const envmode = 'development';
+
+ if (process.env.NODE_ENV == 'production') {
+   envmode = 'production';
+ }
+
  module.exports = [{
-   mode: 'development',
+   mode: envmode,
    entry: {
      main: './public/js/main.js'
    },
