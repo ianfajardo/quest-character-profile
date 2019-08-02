@@ -9,8 +9,9 @@ const path = require('path');
 
  var envmode = 'development';
 
- if (process.env.NODE_ENV == 'production') {
+ if (process.env.NODE_ENV === 'production') {
    envmode = 'production';
+   console.log('production build');
  }
 
  module.exports = [{
@@ -22,7 +23,6 @@ const path = require('path');
      filename: '[name].min.js',
      path: path.resolve(__dirname, 'dest')
    },
-   devtool: 'source-map',
    devServer: {
      contentBase: path.join(__dirname, 'public'),
      watchContentBase: true,
