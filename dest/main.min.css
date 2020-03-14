@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ovo);
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,600,700,900);
 @page {
   size: auto;
   margin: 0; }
@@ -8818,6 +8818,12 @@ input[type="color"].form-control:disabled {
   font-size: 125%;
   vertical-align: text-bottom; }
 
+.btn {
+  font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-transform: lowercase;
+  border-radius: 0; }
+
 .form-control {
   border-radius: 0;
   background-clip: border-box; }
@@ -8857,6 +8863,61 @@ h1 {
   #header h3 {
     font-family: "Ovo", helvetica, arial, sans-serif;
     text-transform: uppercase; }
+
+.header {
+  position: relative;
+  z-index: 5;
+  padding: 20px 0; }
+  .header h3 {
+    font-family: "Alegreya Sans SC", helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-left: 2rem; }
+  .header p {
+    font-size: 25px; }
+  .header.header-dark {
+    color: #ffffff;
+    background: #111111; }
+  .header .header-logo {
+    max-width: 120px; }
+  .header .btn-link {
+    padding: 0;
+    font-size: 2rem;
+    margin-left: 1rem; }
+
+.home-jumbotron {
+  background: #111111 url("/img/wizard.jpeg") top center no-repeat;
+  color: #ffffff;
+  min-height: 100vh;
+  height: 100vh;
+  margin-top: -95px;
+  text-align: center;
+  position: relative;
+  background-size: cover; }
+  .home-jumbotron:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(90deg, #a6a95d 0%, #c67700 100%);
+    opacity: 0.6; }
+  .home-jumbotron img {
+    max-width: 100%; }
+  .home-jumbotron h1 {
+    margin-bottom: 2rem; }
+  .home-jumbotron .container,
+  .home-jumbotron .row {
+    height: 100%;
+    z-index: 4;
+    position: relative; }
+  .home-jumbotron .btn {
+    font-weight: 700;
+    font-size: 2rem; }
 
 .sheetRow {
   font-family: "Ovo", helvetica, arial, sans-serif;
@@ -9001,13 +9062,10 @@ select.sheetField {
   .form-page .form-page-inner {
     color: #ffffff;
     background: #111111;
-    margin-top: 20px;
     position: relative;
-    z-index: 3;
-    transition: max-height 500ms;
-    max-height: 1000px; }
+    z-index: 3; }
   .form-page .form-page-form {
-    padding: 40px 0; }
+    padding-bottom: 30px; }
   .form-page .form-page-preview {
     background: #ffffff;
     color: #222222;
