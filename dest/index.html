@@ -1,84 +1,262 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quest Character Profile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Character creation tool for the RPG game, Quest"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <title>Quest Character</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Character creation tool for the RPG game, Quest">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.min.css" />
+  </head>
 
+  <body>
+    <div class="app" v-cloak>
+      <div class="charSheet" v-on:click="pageDrawerToggle()">
+        <div class="container" id="header">
+          <div class="row">
+            <div class="col-md-12">
+              <img
+                src="https://static1.squarespace.com/static/5a03659a18b27dcf1b480a1a/t/5c70b0c0e2c483c9fc6c8432/1556387006530/?format=1500w"
+                alt=""
+                style="filter: invert(100%); max-width: 150px; width: 100%; margin-top: 30px; display: block;"
+              />
+              <h3>Character Profile</h3>
+            </div>
+          </div>
+        </div>
 
-  <link rel="stylesheet" href="main.min.css">
-</head>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sheetRow">Hello,</div>
 
-<body>
+              <div class="sheetRow">
+                My name is
+                <div class="fieldContainer fieldContainer-name">
+                  <span id="name" class="sheetField">{{name}}</span>
+                </div>
 
-  <div class="container" id="header">
-    <div class="row">
-      <div class="col-md-12">
-        <img src="https://static1.squarespace.com/static/5a03659a18b27dcf1b480a1a/t/5c70b0c0e2c483c9fc6c8432/1556387006530/?format=1500w" alt="" style="filter: invert(100%); max-width: 150px; width: 100%; margin-top: 30px; display: block;">
-        <h3>Character Profile</h3>
+                (
+                <div class="fieldContainer fieldContainer-pronouns">
+                  <span id="pronouns" class="sheetField ">{{pronouns}} </span>
+                </div>
+                )
+              </div>
+
+              <div class="sheetRow">
+                I'm
+                <div class="fieldContainer fieldContainer-age">
+                  <span id="age" class="sheetField">{{age}}</span>
+                </div>
+                years old, and stand
+                <div class="fieldContainer fieldContainer-height">
+                  <span id="height" class="sheetField">{{height}}</span>
+                </div>
+                tall.
+              </div>
+
+              <div class="sheetRow">
+                I'm the party's
+                <span id="role" class="sheetField">{{role}}</span>.
+              </div>
+
+              <div class="sheetRow">
+                When people seem me, they first notice my
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="app" v-cloak>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sheetRow">Hello,</div>
+      <div class="form-drawer">
+        <div class="form-drawer-tab-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-drawer-tab" v-on:click="toggleDrawer()">
+                  <i class="fas fa-grip-lines"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-drawer-inner" v-bind:class="{ 'hide': drawerToggle }">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-drawer-form">
+                  <h2>Character Creation</h2>
+                  <div class="form-drawer-preview">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="sheetRow">
+                          My name is
+                          <div class="fieldContainer fieldContainer-name">
+                            <span id="name" class="sheetField">{{name}}</span>
+                          </div>
 
-          <div class="sheetRow">My name is <span id="name" class="sheetField" v-tippy="{ html: '#name-template', reactive : true,
-                  interactive : true, theme : 'light', animateFill : false }">{{name}}</span> (
-            <div class="pronounsContainer">
-              <select id="pronouns" class="sheetField form-control" v-model="pronouns">
-                <option value="He / Him">He / Him</option>
-                <option value="She / Her">She / Her</option>
-                <option value="They / Them">They / Them</option>
-                <option value=""></option>
-              </select>
-            </div> )</div>
+                          (
+                          <div class="fieldContainer fieldContainer-pronouns">
+                            <span id="pronouns" class="sheetField "
+                              >{{pronouns}}
+                            </span>
+                          </div>
+                          )
+                        </div>
 
-          <div class="sheetRow">I'm <span id="age" class="sheetField" v-tippy="{ html: '#age-template', reactive : true,
-                  interactive : true, theme : 'light', animateFill : false }">{{age}}</span> years old, and stand <span id="height" class="sheetField">{{height}}</span> tall.</div>
+                        <div class="sheetRow">
+                          I'm
+                          <div class="fieldContainer fieldContainer-age">
+                            <span id="age" class="sheetField">{{age}}</span>
+                          </div>
+                          years old, and stand
+                          <div class="fieldContainer fieldContainer-height">
+                            <span id="height" class="sheetField"
+                              >{{height}}</span
+                            >
+                          </div>
+                          tall.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="input-group-2"
+                        label="Your Name:"
+                        label-for="input-2"
+                      >
+                        <b-form-input
+                          id="input-2"
+                          v-model="name"
+                          required
+                          placeholder="NAME"
+                        ></b-form-input>
+                      </b-form-group>
+                    </div>
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="input-group-2"
+                        label="Pronouns:"
+                        label-for="pronouns-input"
+                      >
+                        <b-input-group>
+                          <b-form-input
+                            id="pronouns-input"
+                            class="input-pronouns"
+                            v-model="pronouns"
+                          ></b-form-input>
 
-          <div class="sheetRow">I'm the party's <span id="role" class="sheetField">{{role}}</span>.</div>
+                          <template v-slot:append>
+                            <b-dropdown variant="primary">
+                              <b-dropdown-item
+                                v-on:click="updatePronouns('He / Him')"
+                                >He / Him</b-dropdown-item
+                              >
+                              <b-dropdown-item
+                                v-on:click="updatePronouns('She / Her')"
+                                >She / Her</b-dropdown-item
+                              >
+                              <b-dropdown-item
+                                v-on:click="updatePronouns('They / Them')"
+                                >They / Them</b-dropdown-item
+                              >
+                            </b-dropdown>
+                          </template>
+                        </b-input-group>
+                      </b-form-group>
+                    </div>
+                  </div>
 
-          <div class="sheetRow">When people seem me, they first notice my </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="age-label"
+                        label="Age:"
+                        label-for="age-input"
+                        class="mt-3"
+                      >
+                        <b-form-input
+                          id="age-input"
+                          v-model="age"
+                          required
+                          placeholder="Enter name"
+                          type="number"
+                        ></b-form-input>
+                      </b-form-group>
+                    </div>
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="height-label"
+                        label="Height:"
+                        label-for="height-input"
+                        class="mt-3"
+                      >
+                        <b-form-input
+                          id="height-input"
+                          v-model="height"
+                          required
+                          placeholder="Height"
+                          type="text"
+                        ></b-form-input>
+                      </b-form-group>
+                    </div>
+                  </div>
 
+                  <div class="row">
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="age-label"
+                        label="Role:"
+                        label-for="age-input"
+                        class="mt-3"
+                      >
+                        <b-form-input
+                          id="age-input"
+                          v-model="age"
+                          required
+                          placeholder="Enter name"
+                          type="number"
+                        ></b-form-input>
+                      </b-form-group>
+                    </div>
+                    <div class="col-md-6">
+                      <b-form-group
+                        id="height-label"
+                        label="Height:"
+                        label-for="height-input"
+                        class="mt-3"
+                      >
+                        <b-form-input
+                          id="height-input"
+                          v-model="height"
+                          required
+                          placeholder="Height"
+                          type="text"
+                        ></b-form-input>
+                      </b-form-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <input type="text" v-model="name" placeholder="name">
-          <input type="text" v-model="pronouns" placeholder="pronouns">
-          <input type="number" v-model="age" placeholder="age">
-          <input type="text" v-model="height" placeholder="height">
-        </div>
-      </div>
-
-    </div>
-
-    <div id="name-template">
-      <input type="text" v-model="name" placeholder="name">
-    </div>
-
-    <div id="age-template">
-      <input type="number" v-model="age" placeholder="age">
-    </div>
-
-  </div>
-
-
-
-  <script type="text/javascript" src="main.min.js"></script>
-
-</body>
-
+    <script type="text/javascript" src="main.min.js"></script>
+  </body>
 </html>
