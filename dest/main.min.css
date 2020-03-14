@@ -8888,7 +8888,7 @@ h1 {
     margin-left: 1rem; }
 
 .home-jumbotron {
-  background: #111111 url([object Module]) top center no-repeat;
+  background: #111111 url(public/img/wizard.jpg) top center no-repeat;
   color: #ffffff;
   min-height: 100vh;
   height: 100vh;
