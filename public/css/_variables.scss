@@ -1,2 +1,11 @@
 $black: #000000;
+$darkgrey: #000000;
 $yellow: #ffc300;
+$white: #ffffff;
+$lightgrey: #bbbbbb;
+
+//bootstrap overrides
+$theme-colors: (
+  "primary": rgba(255, 221, 0, 1),
+  "danger": #ff4136
+);

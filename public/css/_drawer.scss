@@ -1,0 +1,82 @@
+$pull-tab-height: 20px;
+
+.form-drawer {
+  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 16px;
+
+  .form-drawer-tab-inner {
+    position: absolute;
+    font-weight: 900;
+    top: 0;
+    left: 0;
+    height: $pull-tab-height;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 5;
+  }
+
+  .form-drawer-inner {
+    color: $white;
+    background: $darkgrey;
+    margin-top: $pull-tab-height;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+    transition: max-height 500ms;
+    max-height: 1000px;
+
+    &.hide {
+      max-height: 0;
+    }
+  }
+
+  .form-drawer-form {
+    padding: 40px 0;
+  }
+
+  .form-drawer-preview {
+    background: $white;
+    color: $black;
+    padding: 40px 40px;
+    margin: 25px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    .sheetRow {
+      font-size: 25px;
+      margin-bottom: 10px;
+
+      .sheetField {
+        font-size: 25px;
+        min-height: 35px;
+      }
+    }
+  }
+
+  .form-drawer-tab {
+    background: $darkgrey;
+    color: $white;
+    font-family: "Font Awesome 5 Free";
+    content: "\f077";
+    font-weight: 900;
+    text-align: center;
+    width: 80px;
+    vertical-align: middle;
+    z-index: 4;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    i {
+      line-height: $pull-tab-height;
+    }
+  }
+}
