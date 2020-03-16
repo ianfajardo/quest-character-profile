@@ -82,7 +82,16 @@
               </div>
             </div>
           </div>
+        </div> <!-- end row -->
+        <div class="row">
+          <div class="col-md-6">
+            <router-link to="/" class="btn btn-lg btn-primary ">Start Over <b-icon-arrow-counterclockwise></b-icon-arrow-counterclockwise></router-link>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <router-link to="/role" class="btn btn-lg btn-primary ">Next: Choose Your Role <b-icon-arrow-right-short></b-icon-arrow-right-short></router-link>
+          </div>
         </div>
+
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Ovo", helvetica, arial, sans-serif;
+  font-family: "Alegreya", "Ovo", helvetica, arial, sans-serif;
   font-size: 35px;
   overscroll-behavior: none;
 }
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Alegreya", helvetica, arial, sans-serif;
+  font-family: "Ovo", helvetica, arial, sans-serif;
   font-weight: 900;
 }
 
@@ -75,15 +75,28 @@ h1 {
   }
 }
 
+.footer {
+  background: $darkgrey;
+  color: $white;
+  font-size: 20px;
+  padding: 40px 0;
+
+  a.btn-link {
+    padding: 0;
+    font-size: 2rem;
+  }
+}
+
 .home-jumbotron {
-  background: $darkgrey url("../img/wizard.jpg") top center no-repeat;
+  background: $darkgrey url("../img/adventure-mountains.jpg") center center
+    no-repeat;
   color: $white;
   min-height: 100vh;
   height: 100vh;
   margin-top: -95px;
   text-align: center;
   position: relative;
-  background-size:cover;
+  background-size: cover;
 
   &:after {
     content: "";
@@ -93,8 +106,9 @@ h1 {
     width: 100%;
     height: 100%;
     z-index: 3;
-    background: linear-gradient(90deg, #a6a95d 0%, #c67700 100%);
-    opacity: 0.6;
+    background: #000000;
+    //background: linear-gradient(90deg, #a6a95d 0%, #c67700 100%);
+    opacity: 0.4;
   }
 
   img {
@@ -116,8 +130,6 @@ h1 {
     font-weight: 700;
     font-size: 2rem;
   }
-
-  
 }
 
 .sheetRow {
@@ -213,68 +225,64 @@ select.sheetField {
   }
 }
 
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
+.role-card {
+  background: $darkgrey;
+  background-size: cover;
+  font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 100ms ease;
+  text-align: center;
+  text-transform: lowercase;
+  cursor: pointer;
+
+  .role-title {
+    font-size: 30px;
+  }
+
+  .role-image {
+    padding: 150px 40px;
+  }
+
+  $this: &;
+
+  &#{$this}-fighter {
+    .role-image {
+      background: $darkgrey url("../img/fighter.jpg") top center no-repeat;
+      background-size: cover;
+    }
+    a, a:focus {
+      color: $fighter;
+      &:hover {
+        color: $fighter;
+        opacity: .8;
+      }
+    }
+  }
+
+  &#{$this}-invoker {
+    .role-image {
+      background: $darkgrey url("../img/invoker.jpg") top center no-repeat;
+      background-size: cover;
+    }
+    a, a:focus {
+      color: $invoker;
+      &:hover {
+        color: $invoker;
+        opacity: .8;
+      }
+    }
+  }
+
+  &#{$this}-ranger {
+    .role-image {
+      background: $darkgrey url("../img/ranger.jpg") top center no-repeat;
+      background-size: cover;
+    }
+    a, a:focus {
+      color: $ranger;
+      &:hover {
+        color: $ranger;
+        opacity: .8;
+      }
+    }
+  }
 }
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
-
-.modal-body {
-  margin: 20px 0;
-}
-
-.modal-default-button {
-  float: right;
-}
-
-/*
-   * The following styles are auto-applied to elements with
-   * transition="modal" when their visibility is toggled
-   * by Vue.js.
-   *
-   * You can easily play with the modal transition by editing
-   * these styles.
-   */
-
-.modal-enter {
-  opacity: 0;
-}
-
-.modal-leave-active {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-/* input-select */

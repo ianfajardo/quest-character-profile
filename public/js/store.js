@@ -9,6 +9,7 @@ export const store = new Vuex.Store({
     pronouns: "",
     age: "",
     height: "",
+    role: "",
     count: 0
   },
   mutations: {

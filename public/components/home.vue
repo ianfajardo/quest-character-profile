@@ -1,6 +1,5 @@
 <template>
   <div>
-    <topHeader></topHeader>
     <div class="home-jumbotron">
       <div class="container">
         <div class="row align-items-center">
