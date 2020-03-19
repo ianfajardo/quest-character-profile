@@ -2,3 +2,10 @@
   size: auto;
   margin: 0;
 }
+
+@media print {
+  .header, .footer {
+    display: none;
+  }
+}
+

@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-12">
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center flex-column flex-md-row">
             <router-link to="/">
               <img class="header-logo" src="../img/quest-logo-white.png" />
             </router-link>
             <h3>Character Profile</h3>
-            <div class="ml-auto align-items-center d-flex flex-row">
+            <div class="mt-md-0 mt-3 ml-md-auto align-items-center d-flex flex-row">
               <a href="https://www.adventure.game/store" class="btn btn-lg btn-primary">Buy Quest</a>
               <a
                 href="https://github.com/ianfajardo/quest-character-profile"

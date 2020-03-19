@@ -7,7 +7,7 @@ body {
   font-size: 35px;
   overscroll-behavior: none;
 }
- 
+
 .h1,
 .h2,
 .h3,
@@ -174,6 +174,14 @@ h1 {
   &#{$this}-height:after {
     content: "HEIGHT";
   }
+
+  &#{$this}-role {
+    width: 100%;
+    max-width: 400px;
+    &:after {
+      content: "ROLE";
+    }
+  }
 }
 
 select.sheetField {
@@ -226,63 +234,196 @@ select.sheetField {
 }
 
 .role-card {
-  background: $darkgrey;
+  background: $black;
   background-size: cover;
   font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
   width: 100%;
   text-align: center;
   text-transform: lowercase;
   cursor: pointer;
+  padding: 20px;
+  position: relative;
+  margin-top: 1rem;
+
+  &.active,
+  &.active:hover {
+    .role-desc {
+      opacity: 0;
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    .role-desc {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: #000000;
+    opacity: 0;
+    transition: opacity linear 300ms;
+  }
+
+  &:hover:after {
+    opacity: 0.6;
+  }
 
   .role-title {
     font-size: 30px;
+    position: relative;
+    z-index: 4;
+    text-shadow: 1px 1px 1px $black;
   }
 
-  .role-image {
-    padding: 150px 40px;
+  .role-desc {
+    font-family: "Ovo", Arial, Helvetica, sans-serif;
+    height: 100%;
+    min-height: 350px;
+    max-height: 500px;
+    position: relative;
+    z-index: 4;
+    line-height: 1.2;
+    text-transform: none;
+    opacity: 0;
+    transition: opacity linear 500ms;
+    text-align: left;
+  }
+
+  a {
+    background: #444444;
+    padding: 5px;
+    display: block;
+    color: $white;
+    text-decoration: none;
+    position: relative;
+    z-index: 4;
   }
 
   $this: &;
 
   &#{$this}-fighter {
-    .role-image {
-      background: $darkgrey url("../img/fighter.jpg") top center no-repeat;
-      background-size: cover;
-    }
-    a, a:focus {
-      color: $fighter;
+    background: $darkgrey url("../img/fighter.jpg") top center no-repeat;
+    background-size: cover;
+
+    a,
+    a:focus {
       &:hover {
-        color: $fighter;
-        opacity: .8;
+        background: $fighter;
       }
+    }
+    &.active a {
+      background: $fighter;
     }
   }
 
   &#{$this}-invoker {
-    .role-image {
-      background: $darkgrey url("../img/invoker.jpg") top center no-repeat;
-      background-size: cover;
-    }
-    a, a:focus {
-      color: $invoker;
+    background: $darkgrey url("../img/invoker.jpg") top center no-repeat;
+    background-size: cover;
+
+    a,
+    a:focus {
       &:hover {
-        color: $invoker;
-        opacity: .8;
+        background: $invoker;
       }
+    }
+    &.active a {
+      background: $invoker;
     }
   }
 
   &#{$this}-ranger {
-    .role-image {
-      background: $darkgrey url("../img/ranger.jpg") top center no-repeat;
-      background-size: cover;
-    }
-    a, a:focus {
-      color: $ranger;
+    background: $darkgrey url("../img/ranger.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
       &:hover {
-        color: $ranger;
-        opacity: .8;
+        background: $ranger;
       }
+    }
+    &.active a {
+      background: $ranger;
+    }
+  }
+
+  &#{$this}-naturalist {
+    background: $darkgrey url("../img/naturalist.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
+      &:hover {
+        background: $naturalist;
+      }
+    }
+    &.active a {
+      background: $naturalist;
+    }
+  }
+
+  &#{$this}-doctor {
+    background: $darkgrey url("../img/doctor.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
+      &:hover {
+        background: $doctor;
+      }
+    }
+    &.active a {
+      background: $doctor;
+    }
+  }
+
+  &#{$this}-spy {
+    background: $darkgrey url("../img/spy.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
+      &:hover {
+        background: $spy;
+      }
+    }
+    &.active a {
+      background: $spy;
+    }
+  }
+
+  &#{$this}-magician {
+    background: $darkgrey url("../img/magician.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
+      &:hover {
+        background: $magician;
+      }
+    }
+    &.active a {
+      background: $magician;
+    }
+  }
+
+  &#{$this}-wizard {
+    background: $darkgrey url("../img/wizard.jpg") top center no-repeat;
+    background-size: cover;
+    a,
+    a:focus {
+      &:hover {
+        background: $wizard;
+      }
+    }
+    &.active a {
+      background: $wizard;
     }
   }
 }

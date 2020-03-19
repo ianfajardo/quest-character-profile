@@ -22,10 +22,10 @@
             My name is
             <div class="fieldContainer fieldContainer-name">
               <span id="name" class="sheetField">{{name}}</span>
-            </div>(
+            </div>
             <div class="fieldContainer fieldContainer-pronouns">
-              <span id="pronouns" class="sheetField">{{pronouns}}</span>
-            </div>)
+              ( <span id="pronouns" class="sheetField">{{pronouns}}</span> )
+            </div>
           </div>
 
           <div class="sheetRow">

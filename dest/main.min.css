@@ -9010,9 +9010,9 @@ select.sheetField {
   cursor: pointer; }
   .role-card .role-title {
     font-size: 30px; }
-  .role-card .role-image {
+  .role-card .role-desc {
     padding: 150px 40px; }
-  .role-card.role-card-fighter .role-image {
+  .role-card.role-card-fighter .role-desc {
     background: #111111 url(public/img/fighter.jpg) top center no-repeat;
     background-size: cover; }
   .role-card.role-card-fighter a, .role-card.role-card-fighter a:focus {
@@ -9020,7 +9020,7 @@ select.sheetField {
     .role-card.role-card-fighter a:hover, .role-card.role-card-fighter a:focus:hover {
       color: #f04923;
       opacity: .8; }
-  .role-card.role-card-invoker .role-image {
+  .role-card.role-card-invoker .role-desc {
     background: #111111 url(public/img/invoker.jpg) top center no-repeat;
     background-size: cover; }
   .role-card.role-card-invoker a, .role-card.role-card-invoker a:focus {
@@ -9028,7 +9028,7 @@ select.sheetField {
     .role-card.role-card-invoker a:hover, .role-card.role-card-invoker a:focus:hover {
       color: #0a9aee;
       opacity: .8; }
-  .role-card.role-card-ranger .role-image {
+  .role-card.role-card-ranger .role-desc {
     background: #111111 url(public/img/ranger.jpg) top center no-repeat;
     background-size: cover; }
   .role-card.role-card-ranger a, .role-card.role-card-ranger a:focus {
