@@ -17,6 +17,8 @@ import footer from "../components/footer.vue";
 import Home from "../components/home.vue";
 import Name from "../components/name.vue";
 import Role from "../components/role.vue";
+import Scene from "../components/scene.vue";
+import Style from "../components/style.vue";
 
 import CharSheet from "../components/charsheet.vue";
 
@@ -24,6 +26,8 @@ const routes = [
   { path: "/", component: Home, props: true },
   { path: "/name", component: Name, props: true },
   { path: "/role", component: Role, props: true },
+  { path: "/scene", component: Scene, props: true },
+  { path: "/style", component: Style, props: true },
   { path: "/charactersheet", component: CharSheet, props: true },
   { path: "*", component: Home }
 ];

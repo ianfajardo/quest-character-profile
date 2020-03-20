@@ -10,7 +10,19 @@ export const store = new Vuex.Store({
     age: "",
     height: "",
     role: "",
-    count: 0
+    count: 0,
+    body: "",
+    face: "",
+    vibe: "",
+    outfit1: "",
+    outfit2: "",
+    move: "",
+    style: ["", "", ""],
+    home: "",
+    knownFor: "",
+    ideal: "",
+    flaw: "",
+    dream: ""
   },
   mutations: {
     increment(state) {
@@ -24,26 +36,26 @@ export const store = new Vuex.Store({
 });
 
 export var data = {
-  name: '',
-  pronouns: '',
-  age: '',
-  height: '',
-  role: '',
-  body: '',
-  face: '',
-  vibe: '',
-  outfit: [''],
-  move: '',
-  home: '',
-  knownFor: '',
-  ideal: '',
-  flaw: '',
-  dream: '',
+  name: "",
+  pronouns: "",
+  age: "",
+  height: "",
+  role: "",
+  body: "",
+  face: "",
+  vibe: "",
+  outfit: ["", "", ""],
+  move: "",
+  home: "",
+  knownFor: "",
+  ideal: "",
+  flaw: "",
+  dream: "",
   counter: 0,
   timer: 4,
   drawerToggle: true,
   roleOptions: [
-    {value: 'The Fighter', text: "The Fighter"},
-    {value: 'The Fighter', text: "The Fighter"}
+    { value: "The Fighter", text: "The Fighter" },
+    { value: "The Fighter", text: "The Fighter" }
   ]
-}
+};
