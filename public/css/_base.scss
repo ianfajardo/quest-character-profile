@@ -171,7 +171,7 @@ h1 {
 }
 
 .home-jumbotron {
-  background: $darkgrey url("../img/adventure-mountains.jpg") center center
+  background: $darkgrey url("./public/img/adventure-mountains.jpg") center center
     no-repeat;
   color: $white;
   min-height: 100vh;
@@ -474,7 +474,7 @@ select.sheetField {
   $this: &;
 
   &#{$this}-fighter {
-    background: $darkgrey url("../img/fighter.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/fighter.jpg") top center no-repeat;
     background-size: cover;
 
     a,
@@ -489,7 +489,7 @@ select.sheetField {
   }
 
   &#{$this}-invoker {
-    background: $darkgrey url("../img/invoker.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/invoker.jpg") top center no-repeat;
     background-size: cover;
 
     a,
@@ -504,7 +504,7 @@ select.sheetField {
   }
 
   &#{$this}-ranger {
-    background: $darkgrey url("../img/ranger.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/ranger.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
@@ -518,7 +518,7 @@ select.sheetField {
   }
 
   &#{$this}-naturalist {
-    background: $darkgrey url("../img/naturalist.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/naturalist.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
@@ -532,7 +532,7 @@ select.sheetField {
   }
 
   &#{$this}-doctor {
-    background: $darkgrey url("../img/doctor.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/doctor.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
@@ -546,7 +546,7 @@ select.sheetField {
   }
 
   &#{$this}-spy {
-    background: $darkgrey url("../img/spy.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/spy.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
@@ -560,7 +560,7 @@ select.sheetField {
   }
 
   &#{$this}-magician {
-    background: $darkgrey url("../img/magician.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/magician.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
@@ -574,7 +574,7 @@ select.sheetField {
   }
 
   &#{$this}-wizard {
-    background: $darkgrey url("../img/wizard.jpg") top center no-repeat;
+    background: $darkgrey url("./public/img/wizard.jpg") top center no-repeat;
     background-size: cover;
     a,
     a:focus {
