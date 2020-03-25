@@ -62,6 +62,22 @@ module.exports = [
           test: /\.(png|jpg|gif|svg)$/,
           use: [
             {
+              loader: "image-webpack-loader",
+              options: {
+                optipng: {
+                  enabled: false
+                },
+                pngquant: {
+                  quality: [0.65, 0.9],
+                  speed: 4
+                },
+                gifsicle: {
+                  interlaced: false
+                }
+                
+              }
+            },
+            {
               loader: "file-loader",
               options: {
                 esModule: false,
