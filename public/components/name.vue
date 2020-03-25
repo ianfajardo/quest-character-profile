@@ -52,7 +52,7 @@
                       <b-form-input id="pronouns-input" class="input-pronouns" v-model="pronouns"></b-form-input>
 
                       <template v-slot:append>
-                        <b-dropdown variant="primary">
+                        <b-dropdown variant="primary" right>
                           <b-dropdown-item v-on:click="updatePronouns('He / Him')">He / Him</b-dropdown-item>
                           <b-dropdown-item v-on:click="updatePronouns('She / Her')">She / Her</b-dropdown-item>
                           <b-dropdown-item v-on:click="updatePronouns('They / Them')">They / Them</b-dropdown-item>
