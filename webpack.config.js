@@ -72,7 +72,6 @@ module.exports = [
               loader: "image-webpack-loader",
               options: {
                 mozjpeg: {
-                  progressive: true,
                   quality: 90
                 },
                 // optipng.enabled: false will disable optipng
