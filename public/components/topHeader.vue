@@ -9,8 +9,13 @@
             </router-link>
             <h3>Character Profile</h3>
             <div class="mt-md-0 mt-3 ml-md-auto align-items-center d-flex flex-row">
-              <a href="https://www.adventure.game/store" class="btn btn-lg btn-primary">Buy Quest</a>
               <a
+                target="_blank"
+                href="https://www.adventure.game/store"
+                class="btn btn-lg btn-primary"
+              >Buy Quest</a>
+              <a
+                target="_blank"
                 href="https://github.com/ianfajardo/quest-character-profile"
                 class="btn btn-lg btn-link"
               >
