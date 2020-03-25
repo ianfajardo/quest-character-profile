@@ -110,7 +110,7 @@ export default {
     return {
       idealOptions: [
         "compassion",
-        "henerosity",
+        "generosity",
         "heroism",
         "justice",
         "order",
