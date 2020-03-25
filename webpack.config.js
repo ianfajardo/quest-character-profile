@@ -59,33 +59,26 @@ module.exports = [
           loader: "vue-loader"
         },
         {
-          test: /\.(png|jpg|gif|svg)$/,
+          test: /\.(gif|png|jpe?g|svg)$/i,
           use: [
+            'file-loader',
             {
-              loader: "image-webpack-loader",
+              loader: 'image-webpack-loader',
               options: {
-                optipng: {
-                  enabled: false
+                mozjpeg: {
+                  progressive: true,
+                  quality: 90
                 },
                 pngquant: {
-                  quality: [0.65, 0.9],
+                  quality: [0.65, 0.90],
                   speed: 4
                 },
                 gifsicle: {
-                  interlaced: false
+                  interlaced: false,
                 }
-                
               }
             },
-            {
-              loader: "file-loader",
-              options: {
-                esModule: false,
-                name: "[path][name].[ext]"
-              }
-            }
-            
-          ]
+          ],
         }
       ]
     },
