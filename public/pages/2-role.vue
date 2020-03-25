@@ -21,7 +21,12 @@
               </div>
 
               <div class="row">
-                <div class="col-md-6 col-lg-3" v-for="role in roles" v-bind:class="'animated ' + ((activeRole === role.className) ? 'tada' : '')" v-bind:key="role.name">
+                <div
+                  class="col-md-6 col-lg-3"
+                  v-for="role in roles"
+                  v-bind:class="'animated ' + ((activeRole === role.className) ? 'tada' : '')"
+                  v-bind:key="role.name"
+                >
                   <div
                     class="role-card"
                     v-bind:class="'role-card-' + role.name + ' ' + ((activeRole === role.className) ? 'active' : '')"
@@ -39,13 +44,18 @@
           </div>
         </div>
         <!-- end row -->
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row py-5">
+          <div class="col-md-4">
             <router-link to="/name" class="btn btn-lg btn-primary">
               <b-icon-arrow-left-short></b-icon-arrow-left-short>Previous: Say your name
             </router-link>
           </div>
-          <div class="col-md-6 text-md-right">
+          <div class="col-md-4 text-md-center">
+            <router-link to="/charactersheet" class="btn btn-lg btn-secondary">
+              <i class="fas fa-binoculars"></i> &nbsp; Character Profile
+            </router-link>
+          </div>
+          <div class="col-md-4 text-md-right">
             <router-link to="/scene" class="btn btn-lg btn-primary text-md-right">
               Next: Enter the Scene
               <b-icon-arrow-right-short></b-icon-arrow-right-short>
@@ -95,17 +105,20 @@ export default {
         {
           name: "spy",
           className: "Spy",
-          desc: "The Spy is a crafty agent of stealth and subterfuge. They are master assassins and experts in the use of magical gadgets, chemicals, traps, disguises, and forgeries."
+          desc:
+            "The Spy is a crafty agent of stealth and subterfuge. They are master assassins and experts in the use of magical gadgets, chemicals, traps, disguises, and forgeries."
         },
         {
           name: "magician",
           className: "Magician",
-          desc: "The Magician specializes in conjuration and psychic manipulation. From parlor tricks to elaborate deceptions, they are master illusionists, capable of twisting the mind."
+          desc:
+            "The Magician specializes in conjuration and psychic manipulation. From parlor tricks to elaborate deceptions, they are master illusionists, capable of twisting the mind."
         },
         {
           name: "wizard",
           className: "Wizard",
-          desc: "The Wizard is a powerful spellcaster with a diverse set of magical abilities. At the height of their power, they can travel to other worlds and transcend their mortal selves."
+          desc:
+            "The Wizard is a powerful spellcaster with a diverse set of magical abilities. At the height of their power, they can travel to other worlds and transcend their mortal selves."
         }
       ],
       activeRole: ""

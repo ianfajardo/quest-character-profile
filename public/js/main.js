@@ -56,7 +56,6 @@ const router = new VueRouter({
 var app = new Vue({
   store,
   router: router,
-  data: data,
   components: {
     'page-header': topHeader,
     'page-footer': footer

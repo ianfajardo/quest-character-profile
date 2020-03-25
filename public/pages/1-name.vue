@@ -24,7 +24,8 @@
                         <span id="name" class="sheetField">{{name}}</span>
                       </div>
                       <div class="fieldContainer fieldContainer-pronouns">
-                       ( <span id="pronouns" class="sheetField">{{pronouns}}</span> )
+                        (
+                        <span id="pronouns" class="sheetField">{{pronouns}}</span> )
                       </div>
                     </div>
 
@@ -32,10 +33,10 @@
                       I'm
                       <div class="fieldContainer fieldContainer-age">
                         <span id="age" class="sheetField">{{age}}</span>
-                      </div>  old, and stand
+                      </div>old, and stand
                       <div class="fieldContainer fieldContainer-height">
                         <span id="height" class="sheetField">{{height}}</span>
-                      </div> tall.
+                      </div>tall.
                     </div>
                   </div>
                 </div>
@@ -82,16 +83,27 @@
               </div>
             </div>
           </div>
-        </div> <!-- end row -->
-        <div class="row">
-          <div class="col-md-6">
-            <router-link to="/" class="btn btn-lg btn-primary ">Start Over <b-icon-arrow-counterclockwise></b-icon-arrow-counterclockwise></router-link>
+        </div>
+        <!-- end row -->
+        <div class="row py-5">
+          <div class="col-md-4">
+            <router-link to="/" class="btn btn-lg btn-primary">
+              Start Over
+              <b-icon-arrow-counterclockwise></b-icon-arrow-counterclockwise>
+            </router-link>
           </div>
-          <div class="col-md-6 text-md-right">
-            <router-link to="/role" class="btn btn-lg btn-primary ">Next: Choose Your Role <b-icon-arrow-right-short></b-icon-arrow-right-short></router-link>
+          <div class="col-md-4 text-md-center">
+            <router-link to="/charactersheet" class="btn btn-lg btn-secondary">
+              <i class="fas fa-binoculars"></i> &nbsp; Character Profile
+            </router-link>
+          </div>
+          <div class="col-md-4 text-md-right">
+            <router-link to="/role" class="btn btn-lg btn-primary">
+              Next: Choose Your Role
+              <b-icon-arrow-right-short></b-icon-arrow-right-short>
+            </router-link>
           </div>
         </div>
-
       </div>
     </div>
   </div>

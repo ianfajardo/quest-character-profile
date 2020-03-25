@@ -29,8 +29,14 @@ h1 {
 }
 
 .charSheet {
-  margin-top: 20px;
   margin-bottom: 70px;
+}
+
+.charSheet-instructions {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 30px;
+  text-align: left;
 }
 
 .charSheetPrintable {
@@ -39,9 +45,6 @@ h1 {
 }
 
 .charSheet-utility {
-  max-width: 630px;
-  margin: 0 auto;
-
   .btn {
     i {
       margin: 0 5px;

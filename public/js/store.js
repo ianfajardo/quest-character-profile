@@ -10,7 +10,6 @@ export const store = new Vuex.Store({
     age: "",
     height: "",
     role: "",
-    count: 0,
     body: "",
     face: "",
     vibe: "",
@@ -34,28 +33,3 @@ export const store = new Vuex.Store({
     }
   }
 });
-
-export var data = {
-  name: "",
-  pronouns: "",
-  age: "",
-  height: "",
-  role: "",
-  body: "",
-  face: "",
-  vibe: "",
-  outfit: ["", "", ""],
-  move: "",
-  home: "",
-  knownFor: "",
-  ideal: "",
-  flaw: "",
-  dream: "",
-  counter: 0,
-  timer: 4,
-  drawerToggle: true,
-  roleOptions: [
-    { value: "The Fighter", text: "The Fighter" },
-    { value: "The Fighter", text: "The Fighter" }
-  ]
-};

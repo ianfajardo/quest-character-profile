@@ -1,18 +1,34 @@
 <template>
   <div class="charSheet">
-    <div class="charSheet-instructions"></div>
-    <div class="charSheet-utility d-print-none">
-      <div class="d-flex">
-        <div class="ml-auto">
-          <button v-on:click="saveAsJpg()" class="btn btn-primary">
-            <i class="fas fa-file-image"></i> Save as JPG
-          </button>
-          <button v-on:click="print()" class="btn btn-primary">
-            <i class="fas fa-print"></i> Print
-          </button>
+    <div class="container d-print-none">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="charSheet-instructions">
+            <h2>Character Profile Sheet</h2>
+            <p>Click on an underlined field to return to that step and edit.</p>
+            <p>
+              When you're done, use the options to print or save your character profile as a jpg. Also don't forget to
+              <a target="_blank" href="https://www.adventure.game/store">pick up a copy of the book</a>!
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="charSheet-utility d-print-none">
+            <div class="d-flex">
+              <div class="ml-lg-auto">
+                <button v-on:click="saveAsJpg()" class="btn btn-primary">
+                  <i class="fas fa-file-image"></i> Save as JPG
+                </button>
+                <button v-on:click="print()" class="btn btn-primary">
+                  <i class="fas fa-print"></i> Print
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="charSheetPrintable">
       <div class="charSheetTop">
         <div class="container" id="header">
@@ -34,10 +50,10 @@
 
               <div class="sheetRow">
                 My name is
-                <div class="fieldContainer fieldContainer-name">
+                <div v-on:click="editPage('name')" class="fieldContainer fieldContainer-name">
                   <span id="name" class="sheetField">{{name}}</span>
                 </div>
-                <div class="fieldContainer fieldContainer-pronouns">
+                <div v-on:click="editPage('name')" class="fieldContainer fieldContainer-pronouns">
                   (
                   <span id="pronouns" class="sheetField">{{pronouns}}</span> )
                 </div>
@@ -45,17 +61,17 @@
 
               <div class="sheetRow">
                 I'm
-                <div class="fieldContainer fieldContainer-age">
+                <div v-on:click="editPage('name')" class="fieldContainer fieldContainer-age">
                   <span id="age" class="sheetField">{{age}}</span>
                 </div>&nbsp;years old, and stand
-                <div class="fieldContainer fieldContainer-height">
+                <div v-on:click="editPage('name')" class="fieldContainer fieldContainer-height">
                   <span id="height" class="sheetField">{{height}}</span>
                 </div>&nbsp;tall.
               </div>
 
               <div class="sheetRow">
                 I'm the party's
-                <div class="fieldContainer fieldContainer-role">
+                <div v-on:click="editPage('role')" class="fieldContainer fieldContainer-role">
                   <span id="role" class="sheetField">{{role}}</span>
                 </div>.
               </div>
@@ -63,52 +79,65 @@
               <div class="sheetRow">
                 When people seem me, they first notice my
                 <div class="featuresContainer">
-                  <div class="fieldContainer fieldContainer-features">
+                  <div
+                    v-on:click="editPage('scene')"
+                    class="fieldContainer fieldContainer-features"
+                  >
                     <span id="body" class="sheetField">{{body}}</span>
                   </div>,
-                  <span id="face" class="sheetField">{{face}}</span>,
+                  <span v-on:click="editPage('scene')" id="face" class="sheetField">{{face}}</span>,
                 </div>
                 <div class="featuresContainer">
                   and
-                  <span id="vibe" class="sheetField">{{vibe}}</span>.
+                  <span v-on:click="editPage('scene')" id="vibe" class="sheetField">{{vibe}}</span>.
                 </div>
               </div>
 
               <div class="sheetRow">
                 I wear
-                <div class="fieldContainer fieldContainer-style">
+                <div v-on:click="editPage('style')" class="fieldContainer fieldContainer-style">
                   <span id="outfit1" class="sheetField">{{outfit1}}</span>
                 </div>,
-                <span id="outfit2" class="sheetField">{{outfit2}}</span>, and move with
-                <span id="move" class="sheetField">{{move}}</span>.
+                <span v-on:click="editPage('style')" id="outfit2" class="sheetField">{{outfit2}}</span>, and move with
+                <span
+                  v-on:click="editPage('style')"
+                  id="move"
+                  class="sheetField"
+                >{{move}}</span>.
               </div>
 
               <div class="sheetRow">
                 I'm from
-                <div class="fieldContainer fieldContainer-home">
+                <div v-on:click="editPage('callhome')" class="fieldContainer fieldContainer-home">
                   <span id="home" class="sheetField">{{home}}</span>
                 </div>, where my people are known for
-                <div class="fieldContainer fieldContainer-community">
+                <div
+                  v-on:click="editPage('callhome')"
+                  class="fieldContainer fieldContainer-community"
+                >
                   <span id="knownFor" class="sheetField">{{knownFor}}</span>
                 </div>.
               </div>
 
               <div class="sheetRow">
                 I'm belive in
-                <div class="fieldContainer fieldContainer-ideal">
+                <div
+                  v-on:click="editPage('ideal-flaw')"
+                  class="fieldContainer fieldContainer-ideal"
+                >
                   <span id="ideal" class="sheetField">{{ideal}}</span>
                 </div>, but my
               </div>
 
               <div class="sheetRow">
-                <div class="fieldContainer fieldContainer-flaw">
+                <div v-on:click="editPage('ideal-flaw')" class="fieldContainer fieldContainer-flaw">
                   <span id="flaw" class="sheetField">{{flaw}}</span>
                 </div>side can get in my way.
               </div>
 
               <div class="sheetRow">
                 I dream of
-                <div class="fieldContainer fieldContainer-dream">
+                <div v-on:click="editPage('dream')" class="fieldContainer fieldContainer-dream">
                   <span id="dream" class="sheetField">{{dream}}</span>
                 </div>.
               </div>
@@ -136,6 +165,9 @@ export default {
       }).then(function(canvas) {
         saveAs(canvas.toDataURL(), "quest-character-profile.jpg");
       });
+    },
+    editPage: function(page) {
+      this.$router.push(page);
     }
   },
   computed: {

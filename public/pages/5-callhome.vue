@@ -71,13 +71,18 @@
           </div>
         </div>
         <!-- end row -->
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row py-5">
+          <div class="col-md-4">
             <router-link to="/style" class="btn btn-lg btn-primary">
               <b-icon-arrow-left-short></b-icon-arrow-left-short>Previous: Show your style
             </router-link>
           </div>
-          <div class="col-md-6 text-md-right">
+          <div class="col-md-4 text-md-center">
+            <router-link to="/charactersheet" class="btn btn-lg btn-secondary">
+              <i class="fas fa-binoculars"></i> &nbsp; Character Profile
+            </router-link>
+          </div>
+          <div class="col-md-4 text-md-right">
             <router-link to="/ideal-flaw" class="btn btn-lg btn-primary">
               Next: Believe in something
               <b-icon-arrow-right-short></b-icon-arrow-right-short>
