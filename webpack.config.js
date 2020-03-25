@@ -112,6 +112,10 @@ module.exports = [
         {
           from: path.resolve(__dirname, "public/index.html"),
           to: path.resolve(__dirname, "dest")
+        },
+        {
+          from: path.resolve(__dirname, "_redirects"),
+          to: path.resolve(__dirname, "dest")
         }
       ]),
       new VueLoaderPlugin()

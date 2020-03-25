@@ -35,7 +35,7 @@ const routes = [
   { path: "/ideal-flaw", component: Believe, props: true },
   { path: "/dream", component: Dream, props: true },
   { path: "/charactersheet", component: CharSheet, props: true },
-  { path: "/*", component: Home }
+  { path: "*", component: Home }
 ];
 
 // Install BootstrapVue
