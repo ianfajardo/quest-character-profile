@@ -4,6 +4,22 @@
 
 *A tool to create character profiles for Quest with the ability to print and save as a jpg.*
 
+# Current Features
+
+## v1.0.0
+* Ability to print a nicely formatted character profile sheet 
+* Save character profile sheetjpg
+* Live field updating throughout application
+* Clickable character sheet fields to return to edit 
+* Dropdowns to autofill fields with Quest book options
+
+# Future updates
+
+**Account**
+* Ability to create an account to login 
+  * Twitter, Facebook, Google
+* Save multiple character profiles within application to edit later
+
 # Credits
 
 This application was created for [Quest](https://www.adventure.game/) created by [TC Sottek](https://twitter.com/chillmage) and illustrated by [Grim Wilkins](https://twitter.com/grimwilkins).
