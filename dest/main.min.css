@@ -8975,7 +8975,7 @@ h1 {
     margin-left: 1rem; }
 
 .footer {
-  background: #222222;
+  background: #2b2b2b;
   color: #ffffff;
   font-size: 20px;
   padding: 40px 0; }
@@ -8983,8 +8983,21 @@ h1 {
     padding: 0;
     font-size: 2rem; }
 
+.footer-coffee {
+  padding: 20px 0; }
+
+.footer-coffee-address-title {
+  font-family: "Alegreya Sans SC", helvetica, arial, sans-serif;
+  text-transform: lowercase;
+  font-size: 16px; }
+
+.footer-coffee-address {
+  background: #222222;
+  padding: 10px;
+  margin-bottom: 10px; }
+
 .home-jumbotron {
-  background: #222222 url(public/img/adventure-mountains.jpg) center center no-repeat;
+  background: #222222 url("../img/adventure-mountains.jpg") center center no-repeat;
   color: #ffffff;
   min-height: 100vh;
   height: 100vh;
@@ -9142,7 +9155,7 @@ select.sheetField {
   cursor: pointer;
   padding: 20px;
   position: relative;
-  margin-top: 1rem; }
+  margin-top: 2rem; }
   .role-card.active .role-desc, .role-card.active:hover .role-desc {
     opacity: 0; }
   .role-card.active:after, .role-card.active:hover:after {
@@ -9191,7 +9204,7 @@ select.sheetField {
     position: relative;
     z-index: 4; }
   .role-card.role-card-fighter {
-    background: #222222 url(public/img/fighter.jpg) top center no-repeat;
+    background: #222222 url("../img/fighter.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-fighter a:hover,
     .role-card.role-card-fighter a:focus:hover {
@@ -9199,7 +9212,7 @@ select.sheetField {
     .role-card.role-card-fighter.active a {
       background: #f04923; }
   .role-card.role-card-invoker {
-    background: #222222 url(public/img/invoker.jpg) top center no-repeat;
+    background: #222222 url("../img/invoker.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-invoker a:hover,
     .role-card.role-card-invoker a:focus:hover {
@@ -9207,7 +9220,7 @@ select.sheetField {
     .role-card.role-card-invoker.active a {
       background: #0a9aee; }
   .role-card.role-card-ranger {
-    background: #222222 url(public/img/ranger.jpg) top center no-repeat;
+    background: #222222 url("../img/ranger.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-ranger a:hover,
     .role-card.role-card-ranger a:focus:hover {
@@ -9215,7 +9228,7 @@ select.sheetField {
     .role-card.role-card-ranger.active a {
       background: #00a1ba; }
   .role-card.role-card-naturalist {
-    background: #222222 url(public/img/naturalist.jpg) top center no-repeat;
+    background: #222222 url("../img/naturalist.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-naturalist a:hover,
     .role-card.role-card-naturalist a:focus:hover {
@@ -9223,7 +9236,7 @@ select.sheetField {
     .role-card.role-card-naturalist.active a {
       background: #5e9f45; }
   .role-card.role-card-doctor {
-    background: #222222 url(public/img/doctor.jpg) top center no-repeat;
+    background: #222222 url("../img/doctor.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-doctor a:hover,
     .role-card.role-card-doctor a:focus:hover {
@@ -9231,7 +9244,7 @@ select.sheetField {
     .role-card.role-card-doctor.active a {
       background: #dc2028; }
   .role-card.role-card-spy {
-    background: #222222 url(public/img/spy.jpg) top center no-repeat;
+    background: #222222 url("../img/spy.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-spy a:hover,
     .role-card.role-card-spy a:focus:hover {
@@ -9239,7 +9252,7 @@ select.sheetField {
     .role-card.role-card-spy.active a {
       background: #4d3996; }
   .role-card.role-card-magician {
-    background: #222222 url(public/img/magician.jpg) top center no-repeat;
+    background: #222222 url("../img/magician.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-magician a:hover,
     .role-card.role-card-magician a:focus:hover {
@@ -9247,7 +9260,7 @@ select.sheetField {
     .role-card.role-card-magician.active a {
       background: #ec008c; }
   .role-card.role-card-wizard {
-    background: #222222 url(public/img/wizard.jpg) top center no-repeat;
+    background: #222222 url("../img/wizard.jpg") top center no-repeat;
     background-size: cover; }
     .role-card.role-card-wizard a:hover,
     .role-card.role-card-wizard a:focus:hover {

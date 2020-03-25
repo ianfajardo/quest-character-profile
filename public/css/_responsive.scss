@@ -1,6 +1,20 @@
 @include media-breakpoint-down(xs) {
 }
 @include media-breakpoint-down(sm) {
+  .footer-coffee-address {
+    font-size: 16px;
+  }
+
+  .sheetField#role,
+  .sheetField#vibe,
+  .sheetField#move,
+  .sheetField#home,
+  .sheetField#knownFor,
+  .sheetField#ideal,
+  .sheetField#dream {
+    min-width: 250px;
+    width: 100%;
+  }
 }
 @include media-breakpoint-down(md) {
   h1 {
@@ -18,8 +32,8 @@
   }
   .form-page {
     a.btn {
-      margin-top: .5rem;
-      margin-bottom: .5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 }

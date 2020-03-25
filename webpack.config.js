@@ -62,19 +62,11 @@ module.exports = [
           test: /\.(png|jpg|gif|svg)$/,
           use: [
             {
-              loader: "file-loader",
-              options: {
-                esModule: false,
-                name: "[path][name].[ext]"
-              }
-            },
-            {
               loader: "image-webpack-loader",
               options: {
                 mozjpeg: {
                   quality: 90
                 },
-                // optipng.enabled: false will disable optipng
                 optipng: {
                   enabled: false
                 },
@@ -87,7 +79,15 @@ module.exports = [
                 }
                 
               }
+            },
+            {
+              loader: "file-loader",
+              options: {
+                esModule: false,
+                name: "[path][name].[ext]"
+              }
             }
+            
           ]
         }
       ]
