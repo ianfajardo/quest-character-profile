@@ -29,11 +29,73 @@ h1 {
 }
 
 .charSheet {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.charSheetPrintable {
+  min-height: 1000px;
+  padding: 50px 0;
+}
+
+.charSheet-utility {
+  max-width: 630px;
+  margin: 0 auto;
+
+  .btn {
+    i {
+      margin: 0 5px;
+    }
+  }
+}
+
+.charSheetTop {
+  max-width: 630px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.charSheetInner {
+  position: relative;
+  border: 6px solid $black;
+  padding: 40px 15px;
+  border-radius: 40px;
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.charSheetInner-title {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+
+  h3 {
+    display: inline-block;
+    background: $black;
+    margin: 0 auto;
+    color: $white;
+    font-family: "Alegreya Sans SC", helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+  }
 }
 
 #header {
+  img {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   h3 {
     font-family: "Ovo", helvetica, arial, sans-serif;
     text-transform: uppercase;
@@ -135,13 +197,13 @@ h1 {
 .sheetRow {
   font-family: "Ovo", helvetica, arial, sans-serif;
   line-height: 2;
-  margin-bottom: 30px;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .fieldContainer {
   position: relative;
   display: inline-block;
+  overflow: visible;
 
   $this: &;
 
@@ -150,10 +212,10 @@ h1 {
     font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
     font-weight: 400;
     position: absolute;
-    bottom: -15px;
+    bottom: -10px;
     text-align: center;
     width: 100%;
-    font-size: 0.875rem;
+    font-size: 0.675rem;
     letter-spacing: 1px;
     left: 0;
     content: "FIELD";
@@ -175,12 +237,36 @@ h1 {
     content: "HEIGHT";
   }
 
-  &#{$this}-role {
-    width: 100%;
-    max-width: 400px;
-    &:after {
-      content: "ROLE";
-    }
+  &#{$this}-role:after {
+    content: "ROLE";
+  }
+
+  &#{$this}-features:after {
+    content: "DISTINCTIVE FEATURES";
+  }
+
+  &#{$this}-style:after {
+    content: "STYLE";
+  }
+
+  &#{$this}-home:after {
+    content: "HOME";
+  }
+
+  &#{$this}-community:after {
+    content: "COMMUNITY";
+  }
+
+  &#{$this}-ideal:after {
+    content: "IDEAL";
+  }
+
+  &#{$this}-flaw:after {
+    content: "FLAW";
+  }
+
+  &#{$this}-dream:after {
+    content: "DREAM";
   }
 }
 
@@ -197,7 +283,7 @@ select.sheetField {
 .sheetField {
   font-family: "Alegreya", helvetica, arial, sans-serif;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 25px;
   color: darkgrey;
   cursor: pointer;
   display: inline-block;
@@ -205,9 +291,8 @@ select.sheetField {
   position: relative;
   vertical-align: text-bottom;
   text-align: center;
-  min-height: 50px;
-  margin: 0 5px;
-  padding: 5px 15px;
+  min-height: 30px;
+  padding: 0 10px;
   overflow: hidden;
   line-height: 1;
 
@@ -222,24 +307,66 @@ select.sheetField {
   }
 
   &#age {
-    min-width: 100px;
+    min-width: 70px;
     max-width: 200px;
     width: auto;
   }
 
+  &#height {
+    min-width: 150px;
+    max-width: 250px;
+    width: auto;
+  }
+
   &#role {
-    max-width: 400px;
-    width: 100%;
+    min-width: 350px;
+    width: auto;
   }
 
-  &#body, &#face, &#vibe {
-    max-width: 400px;
-    width: 100%;
+  &#body,
+  &#face {
+    min-width: 250px;
+    width: auto;
   }
 
-  &.style {
-    max-width: 300px;
-    width: 100%;
+  &#vibe {
+    min-width: 470px;
+    width: auto;
+  }
+
+  &#outfit1,
+  &#outfit2 {
+    min-width: 215px;
+    width: auto;
+  }
+
+  &#move {
+    min-width: 350px;
+    width: auto;
+  }
+
+  &#home {
+    min-width: 415px;
+    width: auto;
+  }
+
+  &#knownFor {
+    min-width: 515px;
+    width: auto;
+  }
+
+  &#ideal {
+    min-width: 290px;
+    width: auto;
+  }
+
+  &#flaw {
+    min-width: 260px;
+    width: auto;
+  }
+
+  &#dream {
+    min-width: 400px;
   }
 }
 
@@ -438,4 +565,8 @@ select.sheetField {
       background: $wizard;
     }
   }
+}
+
+.ideal-flaw-title {
+  font-size: 3.5rem;
 }

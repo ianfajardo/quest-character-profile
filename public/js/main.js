@@ -19,6 +19,9 @@ import Name from "../components/name.vue";
 import Role from "../components/role.vue";
 import Scene from "../components/scene.vue";
 import Style from "../components/style.vue";
+import CallHome from "../components/callhome.vue";
+import Believe from "../components/believe.vue";
+import Dream from "../components/dream.vue";
 
 import CharSheet from "../components/charsheet.vue";
 
@@ -28,6 +31,9 @@ const routes = [
   { path: "/role", component: Role, props: true },
   { path: "/scene", component: Scene, props: true },
   { path: "/style", component: Style, props: true },
+  { path: "/callhome", component: CallHome, props: true },
+  { path: "/ideal-flaw", component: Believe, props: true },
+  { path: "/dream", component: Dream, props: true },
   { path: "/charactersheet", component: CharSheet, props: true },
   { path: "*", component: Home }
 ];
@@ -40,7 +46,7 @@ Vue.use(IconsPlugin);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  //mode: 'history',
+  mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

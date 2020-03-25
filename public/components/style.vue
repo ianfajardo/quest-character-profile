@@ -94,8 +94,8 @@
             </router-link>
           </div>
           <div class="col-md-6 text-md-right">
-            <router-link to="/style" class="btn btn-lg btn-primary">
-              Next: Show Your Style
+            <router-link to="/callhome" class="btn btn-lg btn-primary">
+              Next: Call Home
               <b-icon-arrow-right-short></b-icon-arrow-right-short>
             </router-link>
           </div>

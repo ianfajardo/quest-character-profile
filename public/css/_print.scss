@@ -4,8 +4,31 @@
 }
 
 @media print {
-  .header, .footer {
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .header,
+  .footer {
     display: none;
   }
-}
+  .charSheetTop {
+    width: 680px;
+  }
+  .sheetField {
+    word-wrap: normal;
+  }
+  .charSheet,
+  .charSheetTop {
+    .container {
+      min-width: auto !important;
+    }
+  }
 
+  .sheetField {
+    &#body, &#face {
+      width: 250px !important;
+    }
+  }
+}

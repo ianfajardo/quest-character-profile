@@ -17,8 +17,20 @@
   margin: 0; }
 
 @media print {
-  .header, .footer {
-    display: none; } }
+  body {
+    -webkit-print-color-adjust: exact !important; }
+  .header,
+  .footer {
+    display: none; }
+  .charSheetTop {
+    width: 680px; }
+  .sheetField {
+    word-wrap: normal; }
+  .charSheet .container,
+  .charSheetTop .container {
+    min-width: auto !important; }
+  .sheetField#body, .sheetField#face {
+    width: 250px !important; } }
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -8875,11 +8887,61 @@ h1 {
   font-size: 72px; }
 
 .charSheet {
-  margin-top: 60px;
-  margin-bottom: 60px; }
+  margin-top: 20px;
+  margin-bottom: 70px; }
+
+.charSheetPrintable {
+  min-height: 1000px;
+  padding: 50px 0; }
+
+.charSheet-utility {
+  max-width: 630px;
+  margin: 0 auto; }
+  .charSheet-utility .btn i {
+    margin: 0 5px; }
+
+.charSheetTop {
+  max-width: 630px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center; }
+
+.charSheetInner {
+  position: relative;
+  border: 6px solid #111111;
+  padding: 40px 15px;
+  border-radius: 40px;
+  max-width: 630px;
+  margin: 0 auto; }
+
+.charSheetInner-title {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5; }
+  .charSheetInner-title h3 {
+    display: inline-block;
+    background: #111111;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "Alegreya Sans SC", helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff; }
 
 #header {
   margin-bottom: 30px; }
+  #header img {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
   #header h3 {
     font-family: "Ovo", helvetica, arial, sans-serif;
     text-transform: uppercase; }
@@ -8951,21 +9013,21 @@ h1 {
 .sheetRow {
   font-family: "Ovo", helvetica, arial, sans-serif;
   line-height: 2;
-  margin-bottom: 30px;
-  font-size: 35px; }
+  font-size: 25px; }
 
 .fieldContainer {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  overflow: visible; }
   .fieldContainer:after {
     color: #bbbbbb;
     font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
     font-weight: 400;
     position: absolute;
-    bottom: -15px;
+    bottom: -10px;
     text-align: center;
     width: 100%;
-    font-size: 0.875rem;
+    font-size: 0.675rem;
     letter-spacing: 1px;
     left: 0;
     content: "FIELD"; }
@@ -8977,11 +9039,22 @@ h1 {
     content: "AGE"; }
   .fieldContainer.fieldContainer-height:after {
     content: "HEIGHT"; }
-  .fieldContainer.fieldContainer-role {
-    width: 100%;
-    max-width: 400px; }
-    .fieldContainer.fieldContainer-role:after {
-      content: "ROLE"; }
+  .fieldContainer.fieldContainer-role:after {
+    content: "ROLE"; }
+  .fieldContainer.fieldContainer-features:after {
+    content: "DISTINCTIVE FEATURES"; }
+  .fieldContainer.fieldContainer-style:after {
+    content: "STYLE"; }
+  .fieldContainer.fieldContainer-home:after {
+    content: "HOME"; }
+  .fieldContainer.fieldContainer-community:after {
+    content: "COMMUNITY"; }
+  .fieldContainer.fieldContainer-ideal:after {
+    content: "IDEAL"; }
+  .fieldContainer.fieldContainer-flaw:after {
+    content: "FLAW"; }
+  .fieldContainer.fieldContainer-dream:after {
+    content: "DREAM"; }
 
 select.sheetField {
   width: auto !important;
@@ -8995,7 +9068,7 @@ select.sheetField {
 .sheetField {
   font-family: "Alegreya", helvetica, arial, sans-serif;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 25px;
   color: darkgrey;
   cursor: pointer;
   display: inline-block;
@@ -9003,9 +9076,8 @@ select.sheetField {
   position: relative;
   vertical-align: text-bottom;
   text-align: center;
-  min-height: 50px;
-  margin: 0 5px;
-  padding: 5px 15px;
+  min-height: 30px;
+  padding: 0 10px;
   overflow: hidden;
   line-height: 1; }
   .sheetField:after {
@@ -9017,18 +9089,42 @@ select.sheetField {
     display: block;
     width: 100%; }
   .sheetField#age {
-    min-width: 100px;
+    min-width: 70px;
     max-width: 200px;
     width: auto; }
+  .sheetField#height {
+    min-width: 150px;
+    max-width: 250px;
+    width: auto; }
   .sheetField#role {
-    max-width: 400px;
-    width: 100%; }
-  .sheetField#body, .sheetField#face, .sheetField#vibe {
-    max-width: 400px;
-    width: 100%; }
-  .sheetField.style {
-    max-width: 300px;
-    width: 100%; }
+    min-width: 350px;
+    width: auto; }
+  .sheetField#body, .sheetField#face {
+    min-width: 250px;
+    width: auto; }
+  .sheetField#vibe {
+    min-width: 470px;
+    width: auto; }
+  .sheetField#outfit1, .sheetField#outfit2 {
+    min-width: 215px;
+    width: auto; }
+  .sheetField#move {
+    min-width: 350px;
+    width: auto; }
+  .sheetField#home {
+    min-width: 415px;
+    width: auto; }
+  .sheetField#knownFor {
+    min-width: 515px;
+    width: auto; }
+  .sheetField#ideal {
+    min-width: 290px;
+    width: auto; }
+  .sheetField#flaw {
+    min-width: 260px;
+    width: auto; }
+  .sheetField#dream {
+    min-width: 400px; }
 
 .role-card {
   background: #111111;
@@ -9154,6 +9250,9 @@ select.sheetField {
     .role-card.role-card-wizard.active a {
       background: #ffc300; }
 
+.ideal-flaw-title {
+  font-size: 3.5rem; }
+
 .form-page {
   position: relative;
   width: 100%;
@@ -9181,12 +9280,8 @@ select.sheetField {
     padding: 40px 40px;
     margin: 25px 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-    .form-page .form-page-preview .sheetRow {
-      font-size: 25px;
-      margin-bottom: 10px; }
-      .form-page .form-page-preview .sheetRow .sheetField {
-        font-size: 25px;
-        min-height: 35px; }
+    .form-page .form-page-preview .sheetRow .sheetField {
+      cursor: default; }
   .form-page .form-page-tab {
     background: #222222;
     color: #ffffff;

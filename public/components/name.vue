@@ -32,10 +32,10 @@
                       I'm
                       <div class="fieldContainer fieldContainer-age">
                         <span id="age" class="sheetField">{{age}}</span>
-                      </div>years old, and stand
+                      </div>  old, and stand
                       <div class="fieldContainer fieldContainer-height">
                         <span id="height" class="sheetField">{{height}}</span>
-                      </div>tall.
+                      </div> tall.
                     </div>
                   </div>
                 </div>

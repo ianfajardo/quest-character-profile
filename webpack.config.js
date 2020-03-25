@@ -30,7 +30,8 @@ module.exports = [
       contentBase: path.join(__dirname, "public"),
       watchContentBase: true,
       hot: true,
-      overlay: true
+      overlay: true,
+      historyApiFallback: true
     },
     module: {
       rules: [
@@ -55,11 +56,39 @@ module.exports = [
         },
         {
           test: /\.(png|jpg|gif|svg)$/,
-          loader: "file-loader",
-          options: {
-            esModule: false,
-            name: "[path][name].[ext]"
-          }
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                esModule: false,
+                name: "[path][name].[ext]"
+              }
+            },
+            {
+              loader: "image-webpack-loader",
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 90
+                },
+                // optipng.enabled: false will disable optipng
+                optipng: {
+                  enabled: false
+                },
+                pngquant: {
+                  quality: [0.65, 0.9],
+                  speed: 4
+                },
+                gifsicle: {
+                  interlaced: false
+                },
+                // the webp option will enable WEBP
+                webp: {
+                  quality: 90
+                }
+              }
+            }
+          ]
         }
       ]
     },
