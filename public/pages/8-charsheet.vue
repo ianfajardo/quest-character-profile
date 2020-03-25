@@ -206,11 +206,11 @@ export default {
     },
     height: {
       get() {
-        return this.$store.state.age;
+        return this.$store.state.height;
       },
       set(value) {
         this.$store.commit("updateMessage", {
-          name: "age",
+          name: "height",
           message: value
         });
       }
