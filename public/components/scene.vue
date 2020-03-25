@@ -45,7 +45,6 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-
                   <b-form-group id="input-group-2" label="Body:" label-for="body-input">
                     <b-input-group>
                       <b-form-input id="body-input" class="input-body" v-model="body"></b-form-input>
@@ -132,13 +131,41 @@ export default {
         "worn scars",
         "iridescent skin",
         "rack of muscles",
-        "towering physique"
+        "towering physique",
+        "speckled complexion",
+        "barrel-sized belly",
+        "head of tentacles",
+        "generous curves",
+        "elongated limbs",
+        "bumpy exterior",
+        "willowy frame",
+        "sculpted hair",
+        "sculpted hair",
+        "sculpted hair",
+        "vestigial tail",
+        "webbed fins",
+        "rough hide"
       ],
       faceOptions: [
         "gaunt face",
         "sharp teeth",
         "fulsome cheeks",
-        "large, pointy ears"
+        "large, pointy ears",
+        "vestigial antennae",
+        "knee-length",
+        "beard",
+        "devastating smile",
+        "windswept face",
+        "manicured fuzz",
+        "ridged forehead",
+        "triangular head",
+        "timeworn face",
+        "romantic eyes",
+        "severe jawline",
+        "skeptical eyes",
+        "radiant smile",
+        "burning eyes",
+        "heavy brows"
       ],
       vibeOptions: [
         "long shadow",
@@ -146,7 +173,20 @@ export default {
         "sparkling gaze",
         "eternal grimace",
         "bursting energy",
-        "an air of mystery"
+        "an air of mystery",
+        "gentle disposition",
+        "androgynous vibes",
+        "thousand-yard stare",
+        "tightly wound energy",
+        "brooding",
+        "presence",
+        "friendly demeanor",
+        "meandering gaze",
+        "graceful posture",
+        "captivating grin",
+        "raucous laugh",
+        "flawless poise",
+        "fiery temper"
       ]
     };
   },

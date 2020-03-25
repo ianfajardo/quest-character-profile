@@ -67,7 +67,6 @@
                   </b-form-group>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -95,17 +94,48 @@ export default {
   data() {
     return {
       homeOptions: [
-        "scales",
-        "worn scars",
-        "iridescent skin",
-        "rack of muscles",
-        "towering physique"
+        "a great metropolis",
+        "a remote village",
+        "a frontier town",
+        "a lonely island",
+        "a capital city",
+        "a seastead",
+        "a remote stronghold",
+        "a traveling caravan",
+        "a hidden warren",
+        "a working farm",
+        "a roadside inn",
+        "a ship at sea",
+        "a place I can't name",
+        "a subterranean city",
+        "a forgotten nation",
+        "a mountain town",
+        "a city in the mist",
+        "a homestead"
       ],
       knownForOptions: [
-        "gaunt face",
-        "sharp teeth",
-        "fulsome cheeks",
-        "large, pointy ears"
+        "their steady pursuit of pleasure",
+        "their easygoing temperament",
+        "their unhurried sense of time",
+        "treating strangers with love",
+        "restoring justice to the land",
+        "once ruling a vast empire",
+        "creating a world wonder",
+        "enduring a great tragedy",
+        "their neutral rationality",
+        "their warm hospitality",
+        "a culture of secrecy",
+        "non-hierarchical relationships",
+        "plainly stating their intentions",
+        "their sense of duty to each other",
+        "resisting a brutal ruling order",
+        "creating historic works of art",
+        "strict adherence to the law",
+        "their commercial success",
+        "setting cultural trends",
+        "their traditional ways",
+        "inventing the future",
+        "losing a great war"
       ]
     };
   },
