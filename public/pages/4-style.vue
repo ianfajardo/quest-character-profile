@@ -19,9 +19,11 @@
                   <div class="col-md-12">
                     <div class="sheetRow">
                       I wear
-                      <span id="style-1" class="style sheetField">{{outfit1}}</span>,
-                      <span id="style-2" class="style sheetField">{{outfit2}}</span>, and move with
-                      <span id="style-3" class="style sheetField">{{move}}</span>.
+                      <div class="fieldContainer fieldContainer-style">
+                        <span id="outfit1" class="sheetField">{{outfit1}}</span>
+                      </div>,
+                      <span id="outfit2" class="sheetField">{{outfit2}}</span>, and move with
+                      <span id="move" class="sheetField">{{move}}</span>.
                     </div>
                   </div>
                 </div>

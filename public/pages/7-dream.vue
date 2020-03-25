@@ -18,7 +18,9 @@
                   <div class="col-md-12">
                     <div class="sheetRow">
                       I dream of
-                      <span id="dream" class="sheetField">{{dream}}</span>.
+                      <div class="fieldContainer fieldContainer-dream">
+                        <span id="dream" class="sheetField">{{dream}}</span>
+                      </div>.
                     </div>
                   </div>
                 </div>

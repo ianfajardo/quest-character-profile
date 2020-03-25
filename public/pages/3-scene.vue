@@ -32,7 +32,9 @@
                     <div class="sheetRow">
                       When people seem me, they first notice my
                       <div class="featuresContainer">
-                        <span id="body" class="sheetField">{{body}}</span>,
+                        <div class="fieldContainer fieldContainer-features">
+                          <span id="body" class="sheetField">{{body}}</span>
+                        </div>,
                         <span id="face" class="sheetField">{{face}}</span>,
                       </div>
                       <div class="featuresContainer">

@@ -21,11 +21,12 @@
                   <div class="col-md-12">
                     <div class="sheetRow">
                       I'm from
-                      <span id="home" class="style sheetField">{{home}}</span>, where my people are known for
-                      <span
-                        id="knownFor"
-                        class="style sheetField"
-                      >{{knownFor}}</span>.
+                      <div class="fieldContainer fieldContainer-home">
+                        <span id="home" class="sheetField">{{home}}</span>
+                      </div>, where my people are known for
+                      <div class="fieldContainer fieldContainer-community">
+                        <span id="knownFor" class="sheetField">{{knownFor}}</span>
+                      </div>.
                     </div>
                   </div>
                 </div>

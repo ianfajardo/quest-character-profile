@@ -36,11 +36,15 @@
                   <div class="col-md-12">
                     <div class="sheetRow">
                       I'm belive in
-                      <span id="ideal" class="sheetField">{{ideal}}</span>, but my
+                      <div class="fieldContainer fieldContainer-ideal">
+                        <span id="ideal" class="sheetField">{{ideal}}</span>
+                      </div>, but my
                     </div>
 
                     <div class="sheetRow">
-                      <span id="flaw" class="style sheetField">{{flaw}}</span> side can get in my way.
+                      <div class="fieldContainer fieldContainer-flaw">
+                        <span id="flaw" class="sheetField">{{flaw}}</span>
+                      </div>side can get in my way.
                     </div>
                   </div>
                 </div>
