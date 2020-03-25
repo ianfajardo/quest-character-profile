@@ -35,7 +35,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="sheetRow">
-                      I'm believe in
+                      I believe in
                       <div class="fieldContainer fieldContainer-ideal">
                         <span id="ideal" class="sheetField">{{ideal}}</span>
                       </div>, but my

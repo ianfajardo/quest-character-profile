@@ -120,7 +120,7 @@
               </div>
 
               <div class="sheetRow">
-                I'm believe in
+                I believe in
                 <div
                   v-on:click="editPage('ideal-flaw')"
                   class="fieldContainer fieldContainer-ideal"
