@@ -14,16 +14,16 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import topHeader from "../components/topHeader.vue";
 import footer from "../components/footer.vue";
 
-import Home from "../components/home.vue";
-import Name from "../components/name.vue";
-import Role from "../components/role.vue";
-import Scene from "../components/scene.vue";
-import Style from "../components/style.vue";
-import CallHome from "../components/callhome.vue";
-import Believe from "../components/believe.vue";
-import Dream from "../components/dream.vue";
-
-import CharSheet from "../components/charsheet.vue";
+//pages
+import Home from "../pages/0-home.vue";
+import Name from "../pages/1-name.vue";
+import Role from "../pages/2-role.vue";
+import Scene from "../pages/3-scene.vue";
+import Style from "../pages/4-style.vue";
+import CallHome from "../pages/5-callhome.vue";
+import Believe from "../pages/6-believe.vue";
+import Dream from "../pages/7-dream.vue";
+import CharSheet from "../pages/8-charsheet.vue";
 
 const routes = [
   { path: "/", component: Home, props: true },
