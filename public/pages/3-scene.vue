@@ -147,8 +147,6 @@ export default {
         "bumpy exterior",
         "willowy frame",
         "sculpted hair",
-        "sculpted hair",
-        "sculpted hair",
         "vestigial tail",
         "webbed fins",
         "rough hide"
