@@ -6,7 +6,7 @@
 
 # Current Features
 
-## v1.0.0
+### v1.0.0
 * Ability to print a nicely formatted character profile sheet 
 * Save character profile sheetjpg
 * Live field updating throughout application
@@ -15,10 +15,13 @@
 
 # Future updates
 
-**Account**
+### Account
 * Ability to create an account to login 
   * Twitter, Facebook, Google
-* Save multiple character profiles within application to edit later
+
+### Saving
+* Save multiple character profiles within application to edit later for each account
+* Ability to share a character sheet with a live url link
 
 # Credits
 
