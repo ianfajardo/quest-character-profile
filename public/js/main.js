@@ -14,6 +14,17 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import topHeader from "../components/topHeader.vue";
 import footer from "../components/footer.vue";
 
+//images
+import "../img/adventure-mountains.jpg";
+import "../img/doctor.jpg";
+import "../img/fighter.jpg";
+import "../img/invoker.jpg";
+import "../img/magician.jpg";
+import "../img/naturalist.jpg";
+import "../img/ranger.jpg";
+import "../img/spy.jpg";
+import "../img/wizard.jpg";
+
 //pages
 import Home from "../pages/0-home.vue";
 import Name from "../pages/1-name.vue";
