@@ -18,7 +18,7 @@
         <div class="container" id="header">
           <div class="row">
             <div class="col-md-12">
-              <img src="img/quest-logo-black.png" alt="Quest Logo" width="150" />
+              <img src="../img/quest-logo-black.png" alt="Quest Logo" width="150" />
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <div class="d-flex align-items-center flex-column flex-md-row">
             <router-link to="/">
-              <img class="header-logo" src="img/quest-logo-white.png" />
+              <img class="header-logo" src="../img/quest-logo-white.png" />
             </router-link>
             <h3>Character Profile</h3>
             <div class="mt-md-0 mt-3 ml-md-auto align-items-center d-flex flex-row">
