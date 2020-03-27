@@ -33,7 +33,7 @@
                       I'm
                       <div class="fieldContainer fieldContainer-age">
                         <span id="age" class="sheetField">{{age}}</span>
-                      </div>old, and stand
+                      </div>&nbsp;years old, and stand
                       <div class="fieldContainer fieldContainer-height">
                         <span id="height" class="sheetField">{{height}}</span>
                       </div>tall.
@@ -67,7 +67,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <b-form-group id="age-label" label="Age:" label-for="age-input" class="mt-3">
-                    <b-form-input id="age-input" v-model="age" required type="number" max="300"></b-form-input>
+                    <b-form-input id="age-input" v-model="age" required type="text" max="300"></b-form-input>
                   </b-form-group>
                 </div>
                 <div class="col-md-6">
