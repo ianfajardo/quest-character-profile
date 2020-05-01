@@ -77,7 +77,7 @@
               </div>
 
               <div class="sheetRow">
-                When people seem me, they first notice my
+                When people see me, they first notice my
                 <div class="featuresContainer">
                   <div
                     v-on:click="editPage('scene')"

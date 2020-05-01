@@ -30,7 +30,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="sheetRow">
-                      When people seem me, they first notice my
+                      When people see me, they first notice my
                       <div class="featuresContainer">
                         <div class="fieldContainer fieldContainer-features">
                           <span id="body" class="sheetField">{{body}}</span>
