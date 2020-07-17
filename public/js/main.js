@@ -15,7 +15,7 @@ import topHeader from "../components/topHeader.vue";
 import footer from "../components/footer.vue";
 
 //images
-import "../img/adventure-mountains.jpg";
+import "../img/qcm-jumbo.jpg";
 import "../img/doctor.jpg";
 import "../img/fighter.jpg";
 import "../img/invoker.jpg";

@@ -26,6 +26,7 @@ $pull-tab-height: 20px;
     //box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 3;
+    padding-top: 30px;
   }
 
   .form-page-form {
@@ -40,7 +41,6 @@ $pull-tab-height: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
     .sheetRow {
-
       .sheetField {
         cursor: default;
       }

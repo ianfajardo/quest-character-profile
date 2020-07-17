@@ -24,6 +24,16 @@ h6 {
   font-weight: 900;
 }
 
+a.header-brand {
+  h3 {
+    color: #ffffff;
+    margin-left: 0;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 h1 {
   font-size: 72px;
 }
@@ -128,7 +138,7 @@ h1 {
 
   &.header-dark {
     color: $white;
-    background: $darkgrey;
+    background: $grey;
   }
 
   .header-logo {
@@ -171,12 +181,9 @@ h1 {
 }
 
 .home-jumbotron {
-  background: $darkgrey url("./public/img/adventure-mountains.jpg") center center
-    no-repeat;
+  background: $darkgrey;
   color: $white;
-  min-height: 100vh;
-  height: 100vh;
-  margin-top: -95px;
+  padding: 50px 15px;
   text-align: center;
   position: relative;
   background-size: cover;
@@ -404,16 +411,6 @@ select.sheetField {
   position: relative;
   margin-top: 2rem;
 
-  &.active,
-  &.active:hover {
-    .role-desc {
-      opacity: 0;
-    }
-    &:after {
-      opacity: 0;
-    }
-  }
-
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
@@ -444,7 +441,7 @@ select.sheetField {
     font-size: 30px;
     position: relative;
     z-index: 4;
-    text-shadow: 1px 1px 1px $black;
+    text-align: left;;
   }
 
   .role-desc {
@@ -456,7 +453,6 @@ select.sheetField {
     z-index: 4;
     line-height: 1.2;
     text-transform: none;
-    opacity: 0;
     transition: opacity linear 500ms;
     text-align: left;
   }
@@ -474,7 +470,7 @@ select.sheetField {
   $this: &;
 
   &#{$this}-fighter {
-    background: $darkgrey url("./public/img/fighter.jpg") top center no-repeat;
+    background: $fighter;
     background-size: cover;
 
     a,
@@ -489,7 +485,7 @@ select.sheetField {
   }
 
   &#{$this}-invoker {
-    background: $darkgrey url("./public/img/invoker.jpg") top center no-repeat;
+    background: $invoker;
     background-size: cover;
 
     a,
@@ -504,7 +500,7 @@ select.sheetField {
   }
 
   &#{$this}-ranger {
-    background: $darkgrey url("./public/img/ranger.jpg") top center no-repeat;
+    background: $ranger;
     background-size: cover;
     a,
     a:focus {
@@ -518,7 +514,7 @@ select.sheetField {
   }
 
   &#{$this}-naturalist {
-    background: $darkgrey url("./public/img/naturalist.jpg") top center no-repeat;
+    background: $naturalist;
     background-size: cover;
     a,
     a:focus {
@@ -532,7 +528,7 @@ select.sheetField {
   }
 
   &#{$this}-doctor {
-    background: $darkgrey url("./public/img/doctor.jpg") top center no-repeat;
+    background: $doctor;
     background-size: cover;
     a,
     a:focus {
@@ -546,7 +542,7 @@ select.sheetField {
   }
 
   &#{$this}-spy {
-    background: $darkgrey url("./public/img/spy.jpg") top center no-repeat;
+    background: $spy;
     background-size: cover;
     a,
     a:focus {
@@ -560,7 +556,7 @@ select.sheetField {
   }
 
   &#{$this}-magician {
-    background: $darkgrey url("./public/img/magician.jpg") top center no-repeat;
+    background: $magician;
     background-size: cover;
     a,
     a:focus {
@@ -574,7 +570,7 @@ select.sheetField {
   }
 
   &#{$this}-wizard {
-    background: $darkgrey url("./public/img/wizard.jpg") top center no-repeat;
+    background: $wizard;
     background-size: cover;
     a,
     a:focus {

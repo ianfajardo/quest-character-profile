@@ -6,6 +6,10 @@
 
 # Current Features
 
+### v1.1.0
+* Added new creators license
+* Removed imagery from artist until able to receive permission
+
 ### v1.0.0
 * Ability to print a nicely formatted character profile sheet 
 * Save character profile sheetjpg

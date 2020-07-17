@@ -4,16 +4,21 @@
       <div class="row align-items-center">
         <div class="col-md-12">
           <p>
-            This application was created for
+            This work uses material from the Quest Creators Resource. The Quest Creators
+            Resource by The Adventure Guild, LLC is licensed under
             <a
-              target="_blank"
-              href="https://www.adventure.game/"
-            >Quest</a> created by
-            <a target="_blank" href="https://twitter.com/chillmage">TC Sottek</a> and illustrated by
+              href="https://creativecommons.org/licenses/by/4.0/"
+            >CC BY 4.0</a>. For more
+            information about Quest, please visit
             <a
-              target="_blank"
-              href="https://twitter.com/grimwilkins"
-            >Grim Wilkins</a>.
+              href="https://www.adventure.game"
+            >www.adventure.game</a>. Additionally,
+            please
+            <a
+              href="https://www.adventure.game/community-code"
+            >read Quest’s Community Guidelines</a>
+
+            to help create experiences that are positive and fun.
           </p>
           <p>
             Developed by
